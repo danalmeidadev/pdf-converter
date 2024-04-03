@@ -1,7 +1,11 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+import menu_combinar
 import menu_extrair
+import menu_imagens
+import menu_marca_agua
+import menu_relatorio
 
 st.set_page_config(
     page_title="PDFTools",
@@ -38,12 +42,12 @@ with col2:
         case 'Extrair página':
             menu_extrair.exibir_menu_extrair(coluna=col2)
         case 'Combinar PDFs':
-            st.write('Combinar PDFs')
+            menu_combinar.exibir_menu_combinar(coluna=col2)
         case "Adicionar marca d'água":
-            st.write("Adicionar marca d'água")
+            menu_marca_agua.exibir_menu_marca_agua(coluna=col2)
         case 'Imagens para PDF':
-            st.write('Imagens para PDF')
+            menu_imagens.exibir_menu_imagens(coluna=col2)
         case 'Excel para PDF':
-            st.write('Excel para PDF')
+            menu_relatorio.exibir_menu_relatorio(coluna=col2)
         case _:
             st.write('Escolha uma opção')
