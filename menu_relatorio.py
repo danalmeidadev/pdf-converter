@@ -54,15 +54,7 @@ def exibir_menu_relatorio(coluna):
                 nome_output = caminho_temp / f'Relatório Mensal - {mes_referencia}.pdf'
                 with open(nome_output, 'rb') as relatorio_pdf:
                     dados_pdf = relatorio_pdf.read()
-             return dados_pdf
-
-
-
-
-
-
-
-
+            return dados_pdf
 
         if clicou_processar:
             dados_excel = pegar_dados_do_relatorio_pdf(arquivo_excel, seletor_ano, seletor_mes)
